@@ -2,7 +2,9 @@ const cacheName = 'my-site-cache-v1';
 const filesToCache = [
   '/',
   '/styles/inline.css',
-  'app.js'
+  '/node_modules/material-design-lite/material.min.css',
+  '/node_modules/material-design-lite/material.min.js',
+  '/scripts/app.js'
 ];
 
 const logSw = msg =>

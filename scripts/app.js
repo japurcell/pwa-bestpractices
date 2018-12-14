@@ -5,7 +5,10 @@
   const app = {
     loader: document.querySelector('.loader'),
     dialog: document.querySelector('.mdl-dialog'),
-    showDialogButton: document.querySelector('#show-dialog')
+    dialogTitle: document.querySelector('.mdl-dialog__title'),
+    dialogContent: document.querySelector('.mdl-dialog__content'),
+    dialogActions: document.querySelector('.mdl-dialog__actions'),
+    dialogSaveButton: document.querySelector('.mdl-button')
   };
 
   app.loadItems = (initialItems) =>
@@ -16,6 +19,12 @@
       {
         const el = document.createElement('div');
         el.classList.add('card');
+        el.addEventListener('click', e =>
+        {
+          app.dialogTitle.innerText = 'title';
+          app.dialogContent.innerText = 'content';
+          app.dialog.showModal();
+        });
 
         const elTitle = document.createElement('h3');
         elTitle.classList.add('card-title');
@@ -61,9 +70,9 @@
   app.initialize = () =>
   {
     app.loaderDisplay = app.loader.style.display;
-    app.showDialogButton.addEventListener('click', e =>
+    app.dialogSaveButton.addEventListener('click', e =>
     {
-      app.dialog.showModal();
+      app.dialog.close();
     });
   };
 

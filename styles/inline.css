@@ -1,25 +1,28 @@
 html, body {
   padding: 0;
   margin: 0;
+  height: 100%;
   width: 100%;
   font-family: 'Helvetica', 'Verdana', sans-serif;
   font-display: optional;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+html {
+  overflow: hidden;
+}
+
 h3 {
   margin: 5px;
 }
 
-html {
-  overflow: hidden; }
-
-.container, .main {
+.main {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
-  margin: auto;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .header {

@@ -5,7 +5,9 @@
     <title>App Shell</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles/inline.css">
+    <link rel="stylesheet" href="/node_modules/material-design-lite/material.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/inline.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <link rel="manifest" href="/manifest.json">
 
@@ -18,9 +20,9 @@
     <!-- <meta name="msapplication-TileColor" content="#2F3BA2"> -->
   </head>
 
-  <body class="container">
+  <body>
     <header class="header">
-      <h1 class="header__title">App Shell</h1>
+      <h3 class="header__title">App Shell</h1>
     </header>
 
     <main class="main"></main>
@@ -41,8 +43,8 @@
         <button type="button" class="mdl-button">Save</button>
       </div>
     </dialog>
-    <button id="show-dialog" type="button" class="mdl-button">Show Dialog</button>
 
-    <script src="app.js" async></script>
+    <script src="/node_modules/material-design-lite/material.min.js" async></script>
+    <script src="/scripts/app.js" async></script>
   </body>
 </html>
